@@ -1,0 +1,30 @@
+<div class="banner">
+  <div class="container">
+    <h1>Cocktail compailer</h1>
+    <p>Learn to do cocktails</p>
+  </div>
+</div>
+
+
+
+
+<div class = "main-container">
+<div class = "card-container">
+
+<% @cocktails.each do |x| %>
+
+<div class="card" style="width: 18rem;">
+
+  <div class="card-body">
+    <h5 class="card-title"><%= x.name %> </h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <%= link_to "Recipe", cocktail_path(x), class: "btn btn-primary"%>
+  </div>
+</div>
+    <% end %>
+</div>
+<%= link_to "create new cocktail",  new_cocktail_path, class: "btn btn-primary my-5" %>
+</div>
+
+
+
